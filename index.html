@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alya Rizqita - Executive Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="btn-export" class="fab-btn no-print" title="Unduh Portfolio Landscape">
+        <i class="ph ph-download-simple"></i> Unduh PDF
+    </button>
+
+    <main id="portfolio-wrapper">
+        
+        <section class="hero-section" id="page-1">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <div class="badge-premium">Administrasi Akademik & Operasional</div>
+                    <h1>Alya Rizqita.</h1>
+                    <h2>Menghadirkan Keteraturan dalam Dinamika Layanan Publik.</h2>
+                    <p>Terbiasa menangani operasional bervolume tinggi di ITB Career Center. Memadukan keakuratan manajemen data dengan efektivitas komunikasi lintas kanal untuk menciptakan layanan yang presisi dan profesional.</p>
+                    
+                    <div class="contact-pills">
+                        <span><i class="ph ph-envelope"></i> alyarizqita22@gmail.com</span>
+                        <span><i class="ph ph-phone"></i> +62 895 3754 72169</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-frame">
+                        <img src="assets/profile-alya.png" alt="Alya Rizqita">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pdf-page-break"></div> <section class="metrics-section" id="page-2">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="sub-heading">Service Level Agreement</span>
+                    <h2>Bukti Kinerja & Operasional</h2>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="card premium-card">
+                        <div class="card-icon"><i class="ph ph-clock-countdown"></i></div>
+                        <h3>&lt; 24 Jam</h3>
+                        <p>Resolusi respons komunikasi publik. Didukung oleh <strong>Effective Communication</strong> dan <strong>Problem-solving</strong> tingkat tinggi.</p>
+                    </div>
+                    <div class="card premium-card">
+                        <div class="card-icon"><i class="ph ph-users-three"></i></div>
+                        <h3>200+ Member</h3>
+                        <p>Aktivasi anggota per bulan. Dieksekusi dengan pendekatan manajemen data yang sangat <strong>Detail-oriented</strong>.</p>
+                    </div>
+                    <div class="card premium-card">
+                        <div class="card-icon"><i class="ph ph-calendar-check"></i></div>
+                        <h3>50+ Sesi</h3>
+                        <p>Koordinasi jadwal konseling per bulan (95% Hadir). Mengandalkan <strong>Teamwork & Facilitation</strong> bersama para psikolog.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="pdf-page-break"></div> <section class="report-section" id="page-3">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="sub-heading">Manajemen Data</span>
+                    <h2>Visualisasi Analitik Laporan</h2>
+                    <p class="heading-desc">Mengelola ribuan entri data pencari kerja dan menyajikannya dalam analitik terstruktur untuk mendukung keputusan pimpinan (Data disamarkan).</p>
+                </div>
+                
+                <div class="dashboard-showcase">
+                    <div class="mac-bar">
+                        <i></i><i></i><i></i>
+                    </div>
+                    <img src="assets/dummy-dashboard.png" alt="Sistem Pelaporan ITB Career Center">
+                </div>
+            </div>
+        </section>
+
+        <div class="pdf-page-break"></div> <section class="workflow-section" id="page-4">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="sub-heading">Standard Operating Procedure</span>
+                    <h2>Arsitektur Alur Layanan Konseling</h2>
+                    <p class="heading-desc">Penerapan <strong>Leadership & Adaptability</strong> dalam merancang alur kerja yang sistematis agar operasional berjalan tanpa hambatan.</p>
+                </div>
+                
+                <div class="stepper-ui">
+                    <div class="step-card">
+                        <div class="step-num">01</div>
+                        <h4>Penerimaan & Validasi</h4>
+                        <p>Verifikasi akurasi data pendaftar sebelum diproses ke tahap selanjutnya.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-num">02</div>
+                        <h4>Alokasi Penjadwalan</h4>
+                        <p>Pencocokan jadwal presisi tanpa bentrok waktu antara peserta dan psikolog.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-num">03</div>
+                        <h4>Konfirmasi Eksekusi</h4>
+                        <p>Pengawalan tingkat kehadiran via komunikasi proaktif ke semua pihak.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-num">04</div>
+                        <h4>Rekapitulasi Evaluasi</h4>
+                        <p>Penyusunan laporan akhir volume sesi dan <i>feedback</i> untuk manajemen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="portfolio-footer">
+            <div class="container">
+                <p>Siap memberikan standar pelayanan dan administrasi terbaik</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

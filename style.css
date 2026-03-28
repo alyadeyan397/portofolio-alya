@@ -1,0 +1,341 @@
+/* --- VARIABLES --- */
+:root {
+    --bg-main: #FAFCFF;
+    --navy-dark: #0A192F;
+    --navy-light: #112240;
+    --accent-blue: #0070F3;
+    --accent-glow: rgba(0, 112, 243, 0.15);
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --card-bg: #FFFFFF;
+    --border-light: #E2E8F0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- HERO SECTION (Immersive Web Feel) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
+    color: white;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Effect */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 112, 243, 0.2) 0%, transparent 70%);
+    top: -200px;
+    right: -100px;
+    border-radius: 50%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text { flex: 1.2; }
+
+.badge-premium {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    color: #60A5FA;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #94A3B8;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #CBD5E1;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.contact-pills {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.contact-pills span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    backdrop-filter: blur(10px);
+}
+
+.hero-visual {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-frame {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    border-radius: 24px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* --- GENERAL SECTIONS --- */
+section { padding: 80px 0; }
+
+.section-heading { margin-bottom: 48px; }
+.section-heading.text-center { text-align: center; }
+
+.sub-heading {
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    letter-spacing: -1px;
+}
+
+.heading-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-top: 16px;
+    max-width: 700px;
+}
+.text-center .heading-desc { margin-left: auto; margin-right: auto; }
+
+/* --- METRICS GRID --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.premium-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--accent-glow);
+    border-color: rgba(0, 112, 243, 0.3);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-main);
+    color: var(--accent-blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+
+.premium-card h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--navy-dark);
+}
+
+.premium-card p { color: var(--text-muted); font-size: 0.95rem; }
+.premium-card strong { color: var(--navy-dark); }
+
+/* --- DASHBOARD SHOWCASE --- */
+.dashboard-showcase {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.mac-bar {
+    background: #F1F5F9;
+    padding: 16px 20px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.mac-bar i {
+    width: 12px; height: 12px; border-radius: 50%; display: block;
+}
+.mac-bar i:nth-child(1) { background: #FF5F56; }
+.mac-bar i:nth-child(2) { background: #FFBD2E; }
+.mac-bar i:nth-child(3) { background: #27C93F; }
+
+.dashboard-showcase img {
+    width: 100%;
+    display: block;
+}
+
+/* --- STEPPER WORKFLOW (Landscape friendly) --- */
+.stepper-ui {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.step-card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 30px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    position: relative;
+    z-index: 2;
+}
+
+.step-num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--border-light);
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.step-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+}
+
+.step-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+.step-connector {
+    width: 40px;
+    height: 2px;
+    background: var(--border-light);
+    margin-top: 60px;
+}
+
+/* --- FOOTER --- */
+.portfolio-footer {
+    background: var(--navy-dark);
+    color: #94A3B8;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* --- FAB BUTTON --- */
+.fab-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 112, 243, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.fab-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 112, 243, 0.5);
+}
+
+/* =========================================
+   PDF PRINT OPTIMIZATION (THE MAGIC TRICK)
+========================================= */
+/* Class ini yang memastikan tidak ada elemen terpotong saat dirender jadi PDF */
+.pdf-page-break {
+    page-break-before: always;
+}
+
+@media print {
+    body { background: white; }
+    .no-print { display: none !important; }
+    
+    /* Penyesuaian agar muat di kertas Landscape */
+    section { padding: 40px 0; }
+    .hero-section { padding: 60px 0; }
+    
+    /* Mencegah kartu terpotong di tengah halaman */
+    .premium-card, .step-card, .dashboard-showcase {
+        page-break-inside: avoid;
+    }
+}
