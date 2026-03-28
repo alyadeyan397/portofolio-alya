@@ -339,3 +339,74 @@ section { padding: 80px 0; }
         page-break-inside: avoid;
     }
 }
+
+/* =========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+========================================= */
+
+/* Untuk Layar Tablet (Max 992px) */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-container {
+        gap: 40px;
+    }
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Untuk Layar Ponsel (Max 768px) */
+@media (max-width: 768px) {
+    /* Hero Section menjadi vertikal */
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-visual {
+        justify-content: center;
+    }
+    .contact-pills {
+        justify-content: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+    
+    /* Heading Section */
+    .section-heading.text-center {
+        text-align: left;
+    }
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    
+    /* Metrics menjadi 1 kolom tumpuk bawah */
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Stepper Workflow memanjang ke bawah tanpa garis */
+    .stepper-ui {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .step-card {
+        width: 100%;
+        padding: 24px;
+    }
+    .step-connector {
+        display: none; /* Garis horizontal dihilangkan di HP agar rapi */
+    }
+    
+    /* Penyesuaian Tombol FAB */
+    .fab-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
